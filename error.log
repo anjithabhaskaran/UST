@@ -1,0 +1,64 @@
+2023-10-04 16:22:04,124 - services.logger - ERROR - Internal Error: name 'db' is not defined
+2023-10-05 11:20:12,706 - services.logger - ERROR - Internal Error: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2023-10-05 11:21:16,939 - services.logger - ERROR - Internal Error: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2023-10-05 11:26:20,350 - services.logger - ERROR - Internal Error: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2023-10-05 11:32:03,590 - services.logger - ERROR - Internal Error: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2023-10-05 11:32:41,193 - services.logger - ERROR - Internal Error: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2023-10-05 11:33:20,983 - services.logger - ERROR - Internal Error: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2023-10-05 11:46:42,694 - services.logger - ERROR - Internal Error: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2023-10-09 16:44:19,471 - services.logger - ERROR - Internal Error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2023-10-09 16:44:21,459 - services.logger - ERROR - Internal Error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2023-10-09 16:44:24,673 - services.logger - ERROR - Internal Error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2023-10-09 16:48:20,475 - services.logger - ERROR - KeyError: 'GHG'
+2023-10-09 16:48:56,076 - services.logger - ERROR - KeyError: 'GHG'
+2023-10-09 16:49:09,914 - services.logger - ERROR - KeyError: 'GHG'
+2023-10-12 23:38:29,131 - services.logger - ERROR - KeyError: 'Year'
+2023-10-12 23:39:24,710 - services.logger - ERROR - KeyError: 'Fuel_type'
+2023-10-13 11:11:55,412 - services.logger - ERROR - KeyError: 'Fuel_type'
+2023-10-13 12:20:48,465 - services.logger - ERROR - KeyError: 'Year'
+2023-10-13 14:14:53,892 - services.logger - ERROR - KeyError: 'Year'
+2023-10-13 14:53:31,616 - services.logger - ERROR - KeyError: 'Year'
+2023-10-18 15:51:23,691 - services.logger - ERROR - Internal Error: Mapper 'Mapper[Role(role)]' has no property 'user'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2023-10-18 15:52:40,668 - services.logger - ERROR - Internal Error: Mapper 'Mapper[Role(role)]' has no property 'user'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2023-10-18 15:53:59,621 - services.logger - ERROR - Internal Error: Mapper 'Mapper[Role(role)]' has no property 'user'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2023-10-18 15:55:23,184 - services.logger - ERROR - Internal Error: Mapper 'Mapper[Role(role)]' has no property 'user'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2023-10-18 15:58:52,614 - services.logger - ERROR - Internal Error: Mapper 'Mapper[User(user)]' has no property 'role'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2023-10-18 16:00:44,771 - services.logger - ERROR - Internal Error: Mapper 'Mapper[Role(role)]' has no property 'usesr'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2023-10-18 18:47:42,246 - services.logger - ERROR - Internal Error: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2023-10-18 18:49:08,516 - services.logger - ERROR - Internal Error: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2023-10-18 18:50:11,870 - services.logger - ERROR - Internal Error: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2023-10-18 18:51:37,872 - services.logger - ERROR - Internal Error: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2023-10-18 18:53:27,752 - services.logger - ERROR - Internal Error: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2023-10-18 18:56:50,864 - services.logger - ERROR - Internal Error: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2023-10-18 19:20:28,728 - services.logger - ERROR - Internal Error: 'JWTManager' object has no attribute 'encode'
+2023-10-18 20:01:42,636 - services.logger - ERROR - Internal Error: 'str' object has no attribute 'decode'
+2023-10-18 20:16:45,166 - services.logger - ERROR - Internal Error: name 'access_token_str' is not defined
+2023-10-23 13:55:36,744 - services.logger - ERROR - Internal Error: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2023-10-25 15:28:55,323 - services.logger - ERROR - Internal Error: (pymysql.err.OperationalError) (1054, "Unknown column 'user.email' in 'field list'")
+[SQL: SELECT user.id AS user_id, user.email AS user_email, user.user_name AS user_user_name, user.password AS user_password, user.user_role AS user_user_role 
+FROM user 
+WHERE user.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'user_name_1': 'anjitha', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-10-25 15:34:00,862 - services.logger - ERROR - Internal Error: 'User' object has no attribute 'password'
+2023-10-26 23:14:32,626 - services.logger - ERROR - Internal Error: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2023-10-26 23:15:59,136 - services.logger - ERROR - Internal Error: (pymysql.err.OperationalError) (1054, "Unknown column 'emission_factors.fuel_type' in 'where clause'")
+[SQL: SELECT emission_factors.value AS emission_factors_value 
+FROM emission_factors INNER JOIN country ON emission_factors.country_id = country.id 
+WHERE emission_factors.emission_source = %(emission_source_1)s AND country.country_name = %(country_name_1)s AND emission_factors.year = %(year_1)s AND emission_factors.fuel_type = %(fuel_type_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'emission_source_1': 'mobile/stationary', 'country_name_1': 'India', 'year_1': 2023, 'fuel_type_1': 'Diesel', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-10-26 23:32:11,465 - services.logger - ERROR - Internal Error: (pymysql.err.OperationalError) (1054, "Unknown column 'emission_factors.fuel_type' in 'on clause'")
+[SQL: SELECT emission_factors.value AS emission_factors_value 
+FROM emission_factors INNER JOIN country ON emission_factors.country_id = country.id INNER JOIN fuel ON emission_factors.fuel_type = fuel.id 
+WHERE emission_factors.emission_source = %(emission_source_1)s AND country.country_name = %(country_name_1)s AND emission_factors.year = %(year_1)s AND fuel.fuel_name = %(fuel_name_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'emission_source_1': 'mobile/stationary', 'country_name_1': 'India', 'year_1': 2023, 'fuel_name_1': 'Diesel', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-10-26 23:36:08,841 - services.logger - ERROR - Internal Error: type object 'EF_Factors' has no attribute 'fuel_type'
+2023-10-30 18:06:23,427 - services.logger - ERROR - Internal Error: Could not initialize target column for ForeignKey 'country.id' on table 'emission_factors': table 'country' has no column named 'id'
+2023-11-02 18:20:27,863 - services.logger - ERROR - Internal Error: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+2023-11-02 18:31:41,475 - services.logger - ERROR - Internal Error: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a number is required, not str)
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
