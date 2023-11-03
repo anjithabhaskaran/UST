@@ -50,10 +50,15 @@ class Login(Resource):
                   
         except KeyError as e:
             # Handle missing fields in the JSON data
-            response = jsonify("Some field is missing! Please check the field and retry")
-            response.status_code = 400  # Bad Request
+            # response = jsonify("Some field is missing! Please check the field and retry")
+            # response.status_code = 400  # Bad Request
+            # logger.error(f"KeyError: {e}")
+            # return response
+            error_message = f"Some field is missing! Please check the field and retry: {e}"
+            response.status_code = 500  # Internal Server Error
             logger.error(f"KeyError: {e}")
-            return response
+            print(e)
+            return error_message
         except pymysql.Error as db_error:
             # Handle database errors
             response = jsonify(f"Database Error: {db_error}")
