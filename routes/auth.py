@@ -30,7 +30,9 @@ class Login(Resource):
             json_data = request.json
             user_name = json_data['username']
             password = json_data['password']
-            return password
+            user = User.query.filter_by(user_name=user_name).first()
+            user_id = user.user_id
+            return user_id
         except Exception as e:
             error_message = f"An error occurred while processing your request: {e}"
             return error_message
