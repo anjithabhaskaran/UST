@@ -20,6 +20,7 @@ CORS(app)
 
 # # #  PRODUCTION config.py
 # # # Azure MySQL details
+# azure configuration
 app.config['MYSQL_DATABASE_USER'] = 'esgUser'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'User@123'
 app.config['MYSQL_DATABASE_DB'] = 'carbonfootprint'
