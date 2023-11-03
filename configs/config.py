@@ -15,7 +15,7 @@ CORS(app)
 # app.config['MYSQL_DATABASE_PASSWORD'] = 'password'
 # app.config['MYSQL_DATABASE_DB'] = 'carbonfootprint'
 # app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-# # Configure the SQLAlchemy database connection
+# Configure the SQLAlchemy database connection
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/carbonfootprint'
 
 # # #  PRODUCTION config.py
