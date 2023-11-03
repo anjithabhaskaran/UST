@@ -26,6 +26,10 @@ login_emission_model = login_name_space.model('LoginEmissionModel', {
 class Login(Resource):
     @login_name_space.expect(login_emission_model)
     def post(self):
+        json_data = request.json
+        user_name = json_data['username']
+        password = json_data['password']
+        return user_name
         try:
             json_data = request.json
             user_name = json_data['username']
