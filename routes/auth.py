@@ -30,7 +30,7 @@ class Login(Resource):
             json_data = request.json
             user_name = json_data['username']
             password = json_data['password']
-            return jsonify(user_name)
+            return user_name
             # user = User.query.filter_by(user_name=user_name).first()
             # hashed_password = user.password
             # user_id = user.user_id
