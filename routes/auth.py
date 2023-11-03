@@ -30,35 +30,32 @@ class Login(Resource):
             json_data = request.json
             user_name = json_data['username']
             password = json_data['password']
-            user = User.query.filter_by(user_name=user_name).first()
-            hashed_password = user.password
-            user_id = user.user_id
-            print("------hashed_password-----",hashed_password)
-            if ( bcrypt.checkpw(password.encode('utf-8'),hashed_password.encode('utf-8'))):
-                access_token = jwt.encode(
-                    {'user_id': user_id,
-                    'expiration': str(datetime.utcnow() + timedelta(minutes=30))},
-                    app.config['JWT_SECRET_KEY'])
-                print("--------access_token________",access_token)
-                return jsonify(
-                    message='Login Successful',
-                    access_token=access_token,
-                )
+            return jsonify(user_name)
+            # user = User.query.filter_by(user_name=user_name).first()
+            # hashed_password = user.password
+            # user_id = user.user_id
+            # print("------hashed_password-----",hashed_password)
+            # if ( bcrypt.checkpw(password.encode('utf-8'),hashed_password.encode('utf-8'))):
+            #     access_token = jwt.encode(
+            #         {'user_id': user_id,
+            #         'expiration': str(datetime.utcnow() + timedelta(minutes=30))},
+            #         app.config['JWT_SECRET_KEY'])
+            #     print("--------access_token________",access_token)
+            #     return jsonify(
+            #         message='Login Successful',
+            #         access_token=access_token,
+            #     )
                 
-            else :
-                return jsonify(error='Username or Password is incorrect, Try with the correct one..!!'),404   
+            # else :
+            #     return jsonify(error='Username or Password is incorrect, Try with the correct one..!!'),404   
                   
         except KeyError as e:
             # Handle missing fields in the JSON data
-            # response = jsonify("Some field is missing! Please check the field and retry")
-            # response.status_code = 400  # Bad Request
-            # logger.error(f"KeyError: {e}")
-            # return response
-            error_message = f"Some field is missing! Please check the field and retry: {e}"
-            response.status_code = 500  # Internal Server Error
+            response = jsonify("Some field is missing! Please check the field and retry")
+            response.status_code = 400  # Bad Request
             logger.error(f"KeyError: {e}")
-            print(e)
-            return error_message
+            return response
+            
         except pymysql.Error as db_error:
             # Handle database errors
             response = jsonify(f"Database Error: {db_error}")
