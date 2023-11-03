@@ -20,22 +20,11 @@ CORS(app)
 
 # # #  PRODUCTION config.py
 # # # Azure MySQL details
-app.config['MYSQL_DATABASE_USER'] = 'esgsqlserveruser'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'sqlUser@123'
+app.config['MYSQL_DATABASE_USER'] = 'esgUser'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'User@123'
 app.config['MYSQL_DATABASE_DB'] = 'carbonfootprint'
-app.config['MYSQL_DATABASE_HOST'] = 'esgsqlserver.mysql.database.azure.com'
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+mysqlconnector://esgsqlserveruser:sqlUser@123@esgsqlserver.mysql.database.azure.com/carbonfootprint?ssl_ca=DigiCertGlobalRootCA.crt.pem"
-
-
-
-
-
-
-
-
-
-
-
+app.config['MYSQL_DATABASE_HOST'] = 'esgservernew.mysql.database.azure.com'
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+mysqlconnector://esgUser:User@123@esgservernew.mysql.database.azure.com/carbonfootprint?ssl_ca=DigiCertGlobalRootCA.crt.pem"
 
 app.config['JWT_SECRET_KEY'] = '4963cf9d82bb49849dfbd93bfb80bd88'
 # Create a SQLAlchemy database instance

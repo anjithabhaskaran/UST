@@ -2,7 +2,7 @@ from services.logger import logger
 from flask import jsonify, request
 from flask_restx import Api, Resource, fields, Namespace
 from model.emission import User
-from configs.config import db, app , SQLALCHEMY_DATABASE_URI
+from configs.config import db, app 
 import pymysql
 import bcrypt
 from datetime import datetime, timedelta
