@@ -26,24 +26,14 @@ login_emission_model = login_name_space.model('LoginEmissionModel', {
 class Login(Resource):
     @login_name_space.expect(login_emission_model)
     def post(self):
-        # try:
-        #     json_data = request.json
-        #     user_name = json_data['username']
-        #     password = json_data['password']
-        #     user = User.query.filter_by(user_name=user_name).first()
-        #     user_id = user.user_id
-        #     return user_id
-        # except Exception as e:
-        #     error_message = f"An error occurred while processing your request: {e}"
-        #     return error_message
-
-
-        
+ 
         try:
             json_data = request.json
             user_name = json_data['username']
             password = json_data['password']
             user = User.query.filter_by(user_name=user_name).first()
+            print("kkk")
+            print(user)
             hashed_password = user.password
             user_id = user.user_id
             print("------hashed_password-----",hashed_password)
@@ -75,18 +65,9 @@ class Login(Resource):
             logger.error(f"Database Error: {e}")
             return response
         except Exception as e:
-            # Handle other unexpected errors
-            # test_connection(SQLALCHEMY_DATABASE_URI)
-            error_message = f"An error occurred while processing your request: {e}"
+            response = jsonify("An error occurred while processing your request: {e}")
             response.status_code = 500  # Internal Server Error
             logger.error(f"Internal Error: {e}")
-            print(e)
-            return error_message
+            return response
+           
 
-# def test_connection(SQLALCHEMY_DATABASE_URI):
-#     try:
-#         engine = create_engine(SQLALCHEMY_DATABASE_URI)
-#         engine.connect()
-#         return jsonify({'message': 'Database connection successful'})
-#     except OperationalError as e:
-#         return jsonify({'message': f'Database connection failed: {str(e)}'}), 500

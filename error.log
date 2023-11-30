@@ -62,3 +62,5 @@ WHERE emission_factors.emission_source = %(emission_source_1)s AND country.count
 2023-11-02 18:20:27,863 - services.logger - ERROR - Internal Error: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
 2023-11-02 18:31:41,475 - services.logger - ERROR - Internal Error: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '%-.100s:%u' (%s) (Warning: %u format: a number is required, not str)
 (Background on this error at: https://sqlalche.me/e/20/rvf5)
+2023-11-28 12:18:40,661 - services.logger - ERROR - Internal Error: 'NoneType' object has no attribute 'password'
+2023-11-28 12:21:26,416 - services.logger - ERROR - Internal Error: 'NoneType' object has no attribute 'password'
