@@ -30,6 +30,10 @@ class Scope2API(Resource):
             country = json_data['Country']
             # state = json_data['State']
             consumption = json_data['Total_Grid_Consumption']
+
+            #uses grid average emission factors data: e-Grid subregion emission factors, 
+            # which divide the U.S. into different regions approximating grid distribution. 
+            # This is based on the electrical grid and not off of arbitrary state and city boundaries
             
             # Query the database using SQLAlchemy
             # TOTAL EMISSION = CONSUMPTION * ELECTRICITY EMISSION FACTOR
