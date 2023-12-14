@@ -29,7 +29,6 @@ class Scope3_ewaste_API(Resource):
             year = json_data['Year']
             country = json_data['Country']
             state = json_data['State']
-            facility = json_data['Facility']
             weight = json_data['Total_weight']
             
             # Query the database using SQLAlchemy
@@ -38,7 +37,7 @@ class Scope3_ewaste_API(Resource):
                 db.session.query(EF_Factors.value)
                 .join(Country, EF_Factors.country_id == Country.country_id)
                 .join(State, EF_Factors.state_id == State.state_id)
-                .filter(EF_Factors.emission_source == 'e-waste' ,Country.country_name == country, State.state_name == state,Facility.facility == facility, EF_Factors.year == year)
+                .filter(EF_Factors.emission_source == 'e-waste' ,Country.country_name == country, State.state_name == state, EF_Factors.year == year)
                 .first()
             )
             

@@ -13,7 +13,7 @@ class Country(db.Model):
     emission_factors = relationship('EF_Factors', back_populates='country')
     # Define a one-to-many relationship to State
     states = relationship('State', back_populates='country')
-    facilities = relationship('Facility', back_populates='country')
+   
 
 class State(db.Model):
     __tablename__ = 'state'
@@ -26,21 +26,21 @@ class State(db.Model):
     emission_factors = relationship('EF_Factors', back_populates='state')
     # Define a many-to-one relationship to Country
     country = relationship('Country', back_populates='states')
-    facilities = relationship('Facility', back_populates='state')
 
-class Facility(db.Model):
-    __tablename__ = 'facility'
+
+# class Facility(db.Model):
+#     __tablename__ = 'facility'
     
-    facility_id = Column(Integer, primary_key=True)
-    country_id = Column(Integer, ForeignKey('country.country_id'), nullable=False)
-    state_id = Column(Integer, ForeignKey('state.state_id'), nullable=False)
-    facility = Column(String(50), nullable=False)
+#     facility_id = Column(Integer, primary_key=True)
+#     country_id = Column(Integer, ForeignKey('country.country_id'), nullable=False)
+#     state_id = Column(Integer, ForeignKey('state.state_id'), nullable=False)
+#     facility = Column(String(50), nullable=False)
     
-    # Define a one-to-many relationship to EF_Factors
-    emission_factors = relationship('EF_Factors', back_populates='facility')
-    # Define a many-to-one relationship to Country
-    country = relationship('Country', back_populates='facilities')
-    state = relationship('State', back_populates='facilities')
+#     # Define a one-to-many relationship to EF_Factors
+#     emission_factors = relationship('EF_Factors', back_populates='facility')
+#     # Define a many-to-one relationship to Country
+#     country = relationship('Country', back_populates='facilities')
+#     state = relationship('State', back_populates='facilities')
 
 
 class Fuel(db.Model):
@@ -57,12 +57,11 @@ class Fuel(db.Model):
 class EF_Factors(db.Model):
     __tablename__ = 'emission_factors'
     
-    id = Column(Integer, primary_key=True)
+    emission_factor_id = Column(Integer, primary_key=True)
     emission_source = Column(String(50), nullable=False)
     year = Column(Integer, nullable=False)
     country_id = Column(Integer, ForeignKey('country.country_id'), nullable=False)
     state_id = Column(Integer, ForeignKey('state.state_id'), nullable=False)
-    facility_id = Column(Integer, ForeignKey('facility.facility_id'), nullable=False)
     fuel_id = Column(Integer, ForeignKey('fuel.fuel_id'), nullable=False)
     value = Column(Float, nullable=False)
     unit = Column(String(50), nullable=False)
@@ -71,13 +70,12 @@ class EF_Factors(db.Model):
     # Define relationships to Country, State, and Facility
     country = relationship('Country', back_populates='emission_factors')
     state = relationship('State', back_populates='emission_factors')
-    facility = relationship('Facility', back_populates='emission_factors')
     fuel = relationship('Fuel', back_populates='emission_factors')
     
 class GWP_Values(db.Model):
     __tablename__ = 'ghg_gwp'
     
-    id = Column(Integer, primary_key=True)
+    gwp_id = Column(Integer, primary_key=True)
     GHG= Column(String(50), nullable=False)
     source_name = Column(String(50), nullable=False)
     value = Column(Float, nullable=False)
