@@ -27,7 +27,7 @@ class Scope3_t_d_API(Resource):
             json_data = request.json
             year = json_data['Year']
             country = json_data['Country']
-            state = json_data['State']
+            #state = json_data['State']
             loss = json_data['Loss']
             
             # Query the database using SQLAlchemy
@@ -35,8 +35,7 @@ class Scope3_t_d_API(Resource):
             emission_factor = (
                 db.session.query(EF_Factors.value)
                 .join(Country, EF_Factors.country_id == Country.country_id)
-                .join(State, EF_Factors.state_id == State.state_id)
-                .filter(EF_Factors.emission_source == 'electricity', Country.country_name == country, State.state_name == state, EF_Factors.year == year)
+                .filter(EF_Factors.emission_source == 'electricity', Country.country_name == country, EF_Factors.year == year)
                 .first()
             )
             

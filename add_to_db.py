@@ -66,7 +66,7 @@ mydb = mysql.connector.connect(
 # insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('electricity',2023,12,NULL,NULL,0.1900, 'tCO2e/MWh','NULL')"""
 # insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('electricity',2023,13,NULL,NULL,0.1934, 'tCO2e/MWh','NULL')"""
 # insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('electricity',2023,14,NULL,NULL,0.4210, 'tCO2e/MWh','NULL')"""
-insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('electricity',2023,15,NULL,NULL,0.1300, 'tCO2e/MWh','NULL')"""
+# insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('electricity',2023,15,NULL,NULL,0.1300, 'tCO2e/MWh','NULL')"""
 
 
 
@@ -75,9 +75,9 @@ insert_query = """INSERT INTO emission_factors (emission_source,year,country_id,
 
 
 
-#insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('mobile/stationary',2023,1,NULL,1,0.00275, 'tCO2e/L','source:IPCC, formula:ef_factor from IPCC*density')"""
-#insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('e-waste',2023,1,2,NULL, 5.0, 'tCO2e/ton','s3 Assumption, avg of emission is taken')"""
-#insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('computers&laptops',2023,1,NULL,NULL,0.0238, 'kgCO2e/USD','NULL')"""
+# insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('mobile/stationary',2023,1,NULL,1,0.00275, 'tCO2e/L','source:IPCC, formula:ef_factor from IPCC*density')"""
+# insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('e-waste',2023,1,2,NULL, 5.0, 'tCO2e/ton','s3 Assumption, avg of emission is taken')"""
+insert_query = """INSERT INTO emission_factors (emission_source,year,country_id, state_id,fuel_id, value, unit, remarks) VALUES ('computers&laptops',2023,1,NULL,NULL,0.0238, 'kgCO2e/USD','NULL')"""
 
 # # #insert into goods and services
 # # insert_query = """INSERT INTO  goods_and_services(created_on,modified_on,servive_type, consumption_end_date,consumption_start_date,cost,cost_unit,data_quality_type,descriiption,country_id,state_id,facility_id,quantity,quantity_unit, vender_id) VALUES (NULL,NULL,'Laptop',NULL,NULL,1093.96,'$','NULL','NULL',1,2,1,2400, 'kg',NULL)"""

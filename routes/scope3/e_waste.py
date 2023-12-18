@@ -14,7 +14,6 @@ ewaste_emission_model = ewaste_name_space.model('EwasteEmissionModel', {
     'Year': fields.Integer(required=True),
     'Country': fields.String(required=True),
     'State': fields.String(required=True),
-    'Facility': fields.String(required=True),
     'Total_weight': fields.Float(required=True)
 })
 # Create an endpoint for handling Ewaste Emission
